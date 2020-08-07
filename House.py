@@ -30,14 +30,48 @@ circle(400, 200, 40)  # крона дерева
 brushColor(255, 255, 0)
 circle(420, 70, 50)  # солнце
 
+x = 300
+
 brushColor(255, 255, 255)
-circle(300, 70, 20)
-circle(280, 70, 20)
-circle(260, 70, 20)
-circle(240, 70, 20)
-circle(220, 70, 20)
-circle(240, 55, 20)
-circle(260, 55, 20)
-circle(280, 55, 20)
+obj = circle(x, 70, 20)
+if x == 380:
+    brushColor(70, 130, 180)
+    rectangle(0, 0, 500, 300)
+    brushColor(50, 205, 50)
+    rectangle(0, 300, 500, 600)
+obj1 = circle(280, 70, 20)
+obj2 = circle(260, 70, 20)
+obj3 = circle(240, 70, 20)
+obj4 = circle(220, 70, 20)
+obj5 = circle(240, 55, 20)
+obj6 = circle(260, 55, 20)
+obj7 = circle(280, 55, 20)
+
+
+
+def keyPressed(event):
+    if event.keycode == VK_RIGHT:
+        moveObjectBy(obj, 2, 0)
+        moveObjectBy(obj1, 2, 0)
+        moveObjectBy(obj2, 2, 0)
+        moveObjectBy(obj3, 2, 0)
+        moveObjectBy(obj4, 2, 0)
+        moveObjectBy(obj5, 2, 0)
+        moveObjectBy(obj6, 2, 0)
+        moveObjectBy(obj7, 2, 0)
+    elif event.keycode == VK_LEFT:
+        moveObjectBy(obj, -2, 0)
+        moveObjectBy(obj1, -2, 0)
+        moveObjectBy(obj2, -2, 0)
+        moveObjectBy(obj3, -2, 0)
+        moveObjectBy(obj4, -2, 0)
+        moveObjectBy(obj5, -2, 0)
+        moveObjectBy(obj6, -2, 0)
+        moveObjectBy(obj7, -2, 0)
+
+
+onKey(keyPressed)
+
+
 
 run()
